@@ -14,7 +14,7 @@ import (
 var db *pgxpool.Pool
 
 func main() {
-	_ = godotenv.Load() 
+	_ = godotenv.Load()
 	dsn := os.Getenv("DATABASE_URL")
 	if dsn == "" {
 		log.Fatal("DATABASE_URL not set")
@@ -37,7 +37,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "9002"
 	}
 
 	log.Println("🚀 Starting server on port", port)

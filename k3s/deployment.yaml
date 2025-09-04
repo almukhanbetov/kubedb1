@@ -18,6 +18,8 @@ spec:
           ports:
             - containerPort: 9002
           env:
+            - name: PORT
+              value: "9002"                      # ✅ Добавлено
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
